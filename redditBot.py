@@ -6,7 +6,7 @@ reddit = praw.Reddit(client_id='ypmvYaKdYF5UxQ',
                      client_secret='NogsOcGBCfw_2pJsc9mfaEz3nvA',
                      user_agent='my user agent')
 
-# Don't comment the thing below back in but don't remove
+# Don't comment the thing below back in, but don't remove
 #for submission in reddit.subreddit("copypasta").top(limit=10):
     #if 
     #print(submission.selftext)

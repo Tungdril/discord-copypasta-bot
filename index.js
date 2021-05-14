@@ -1,5 +1,6 @@
 // add the discord.js requirement and intialize Discord.Client
 const Discord = require('discord.js');
+const config = require('./config.json')
 const client = new Discord.Client();
 // set the prefix for commands
 const prefix = '!';
@@ -70,4 +71,4 @@ client.on('message', message =>{
 
 */
 // client token
-client.login('NzUzMjYwNjg3ODA3MDg2NzIy.X1jmrg.xk3GayYRBYbY-OC8-P4v8i0h0S8');
+client.login(config.token);

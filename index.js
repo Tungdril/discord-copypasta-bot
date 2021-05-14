@@ -1,7 +1,8 @@
 // add the discord.js requirement and intialize Discord.Client
 const Discord = require('discord.js');
-const config = require('./config.json')
 const client = new Discord.Client();
+const token = process.env.BOT_TOKEN;
+//const config = require('./config.json')
 // set the prefix for commands
 const prefix = '!';
 

@@ -4,10 +4,5 @@ module.exports = {
     description: "this is a ping command",
     execute(message, args){ // put code down below
         message.channel.send('pong!')
-
-
-
-
-
     }
 }

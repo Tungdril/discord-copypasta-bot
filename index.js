@@ -61,10 +61,6 @@ client.on('message', msg=>{
         msg.reply('else 1')
         msg.channel.send('else 2')
     }
-    else{
-        msg.reply('tf')
-        msg.channel.send('tf2')
-    }
     }
 )
 

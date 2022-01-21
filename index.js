@@ -41,7 +41,7 @@ var randomCpy = textByLine[Math.floor(Math.random() * textByLine.length)];
 
 //TODO find a solution for the 2000 char max problem
 client.on('message', msg=>{
-    if (msg.content === "cummy") {
+    if (msg.content.includes("cummy")) {
         var text = fs.readFileSync("./source.txt").toString('utf-8');
         var textByLine = text.split("\n");
         var randomCpy = textByLine[Math.floor(Math.random() * textByLine.length)];
@@ -50,6 +50,25 @@ client.on('message', msg=>{
         }
     }
 )
+
+//somebody love me pls
+client.on('message', msg=>{
+    if(msg.author.bot) return;
+
+    const message_to_lower_case = msg.content.toLowerCase();
+
+    if(msg.author.id === '224549612512346112' && message_to_lower_case.includes ("i love you")){
+        msg.reply('I love you too!')
+    }
+    else if(msg.author.id !== '224549612512346112' && message_to_lower_case.includes ("i love you")){
+        msg.reply('Fuck off, I only love <@224549612512346112>')
+    }
+    }
+)
+
+
+// kick user from VC
+
 
 
 
@@ -73,4 +92,3 @@ client.on('message', message =>{
 */
 // client token
 client.login(process.env.BOT_TOKEN);
-

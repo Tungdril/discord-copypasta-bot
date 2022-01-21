@@ -54,7 +54,7 @@ client.on('message', msg=>{
 //somebody love me pls
 client.on('message', msg=>{
     if(msg.author.id === 224549612512346112 && msg.content == "I love you"){
-        return msg.reply('I love you too!')
+        msg.reply('I love you too!')
     }
     }
 )

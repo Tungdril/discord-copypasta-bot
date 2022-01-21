@@ -41,7 +41,7 @@ var randomCpy = textByLine[Math.floor(Math.random() * textByLine.length)];
 
 //TODO find a solution for the 2000 char max problem
 client.on('message', msg=>{
-    if (msg.content.includes === "cummy") {
+    if (msg.content.includes("cummy")) {
         var text = fs.readFileSync("./source.txt").toString('utf-8');
         var textByLine = text.split("\n");
         var randomCpy = textByLine[Math.floor(Math.random() * textByLine.length)];
@@ -53,10 +53,10 @@ client.on('message', msg=>{
 
 //somebody love me pls
 client.on('message', msg=>{
-    if(msg.author.id === '224549612512346112' && msg.content.includes === "I love you"){
+    if(msg.author.id === '224549612512346112' && msg.content.includes ("I love you")){
         msg.reply('I love you too!')
     }
-    else if(msg.author.id !== '224549612512346112' && msg.content.includes === "I love you"){
+    else if(msg.author.id !== '224549612512346112' && msg.content.includes ("I love you")){
         msg.reply('Fuck off, I only love <@224549612512346112>')
     }
     }

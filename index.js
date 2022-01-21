@@ -51,6 +51,18 @@ client.on('message', msg=>{
     }
 )
 
+//somebody love me pls
+client.on('message', msg=>{
+    if(msg.author.id = 224549612512346112 && msg.content === "I love you"){
+        msg.reply('I love you too!')
+    }
+    }
+)
+
+
+// kick user from VC
+
+
 
 
 /* Don't need that right now
@@ -73,4 +85,3 @@ client.on('message', message =>{
 */
 // client token
 client.login(process.env.BOT_TOKEN);
-

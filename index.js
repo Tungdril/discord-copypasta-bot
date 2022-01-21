@@ -55,11 +55,9 @@ client.on('message', msg=>{
 client.on('message', msg=>{
     if(msg.author.id === '224549612512346112' && msg.content === "I love you"){
         msg.reply('I love you too!')
-        msg.channel.send('I love you 2')
     }
-    else if(msg.author.id === '224549612512346112'){
-        msg.reply('else 1')
-        msg.channel.send('else 2')
+    else if(msg.author.id !== '224549612512346112' && msg.content === "I love you"){
+        msg.reply('Fuck off, I only love <@224549612512346112>')
     }
     }
 )

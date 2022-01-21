@@ -54,8 +54,10 @@ client.on('message', msg=>{
 //somebody love me pls
 client.on('message', msg=>{
     if(msg.author.bot) return;
+    
+    const message_to_lower_case = msg.content.toLowerCase();
 
-    if(msg.author.id === '224549612512346112' && msg.content.toLowerCase().includes ("i love you")){
+    if(msg.author.id === '224549612512346112' && message_to_lower_case.includes ("i love you")){
         msg.reply('I love you too!')
     }
     else if(msg.author.id !== '224549612512346112' && msg.content.includes ("I love you")){

@@ -1,13 +1,19 @@
 // add the discord.js requirement and intialize Discord.Client
 const Discord = require('discord.js');
 const client = new Discord.Client();
+
 const token = process.env.BOT_TOKEN;
+
 //const config = require('./config.json')
 // set the prefix for commands
 const prefix = '!';
 
 // require fs
 const fs = require('fs')
+const cheerio = require('cheerio')
+const request = require('request')
+
+
 
 // no idea
 client.commands = new Discord.Collection();
@@ -66,29 +72,76 @@ client.on('message', msg=>{
     }
 )
 
+//fuck off andi
 
-// kick user from VC
+client.on('message', msg=>{
+    if(msg.author.bot) return;
 
-
-
-
-/* Don't need that right now
-
-// listen for messages with prefix and use the scripts in the commands folder to reply
-client.on('message', message =>{
-    if(!message.content.startsWith(prefix) || message.author.bot) return;
-
-    const args = message.content.slice(prefix.length).split(/ +/);
-    const command = args.shift().toLowerCase();
-
-    if(command === 'ping'){
-       client.commands.get('ping').execute(message, args);
+    if(msg.author.id === '711590431997034597'){
+        msg.reply('Lösch dich <@711590431997034597>')
     }
-    else if(command === 'copypasta'){
-        client.commands.get('copypasta').execute(message, args);
+    else{
+        return;
     }
-})
+    }
+)
+
+//send images
+
+/*
+client.on('message', msg=>{
+
+    const message_to_lower_case = msg.content.toLowerCase();
+    
+    if(message_to_lower_case === 'meme me up daddy'){
+        image(message_to_lower_case);
+        }   
+    }
+)       
+
+
+//get image url form dogpile and send image
+
+function image(message_to_lower_case){
+
+    var options = {
+        url: "http://results.dogpile.com/serp?qc=images&q=" + "cursed image",
+        method: "GET",
+        headers: {
+            Accept: "text/html",
+            "User-Agent": "Chrome"
+        }
+    };
+
+    request(options, function(error, response, responseBody){
+        if(error){
+            console.log('error')
+            return;
+        }
+
+        $ = cheerio.load(responseBody);
+
+        var links = $(".image a.link");
+
+        var urls = new Array(links.length).fill(0).map((v, i) => links.eq(i).attr("href"));
+
+        console.log(urls);
+
+        if(!urls.length){
+            console.log('empty')
+            return;
+        }
+
+        msg.channel.send(urls[Math.floor(Math.random() * urls.length)]);
+        }
+
+    )
+}
 
 */
+
+
+
 // client token
 client.login(process.env.BOT_TOKEN);
+

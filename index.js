@@ -144,4 +144,3 @@ function image(message_to_lower_case){
 
 // client token
 client.login(process.env.BOT_TOKEN);
-

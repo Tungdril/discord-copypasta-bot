@@ -86,6 +86,20 @@ client.on('message', msg=>{
     }
 )
 
+//michael moment 
+
+client.on('message', msg=>{
+    if(msg.author.bot) return;
+
+    if(msg.author.id === '300903500492177409'){
+        msg.reply('https://tenor.com/view/michael-michael-moment-mitchel-mitchell-mitchell-moment-gif-22184275')
+    }
+    else{
+        return;
+    }
+    }
+)
+
 //send images
 
 /*
